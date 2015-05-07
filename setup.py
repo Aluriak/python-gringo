@@ -1,3 +1,4 @@
+from __future__ import print_function
 import setuptools
 import subprocess
 import sys
@@ -11,9 +12,10 @@ def readme():
         return f.read()
 
 if "--compile" in sys.argv:
-    print subprocess.check_output(
+    print(subprocess.check_output(
         ["scons", "--build=release", "pyclingo"],
         cwd=CLINGO_SRC)
+         )
 
 setuptools.setup(
     name="gringo",
