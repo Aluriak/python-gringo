@@ -5,4 +5,4 @@ compile:
 
 install:
 	python2 setup.py sdist
-	pip install --upgrade --user dist/gringo-*.tar.gz
+	pip2 install --upgrade --user dist/gringo-*.tar.gz
