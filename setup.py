@@ -11,9 +11,9 @@ def readme():
         return f.read()
 
 if "--compile" in sys.argv:
-    print subprocess.check_output(
+    print(subprocess.check_output(
         ["scons", "--build=release", "pyclingo"],
-        cwd=CLINGO_SRC)
+        cwd=CLINGO_SRC))
 
 setuptools.setup(
     name="gringo",
